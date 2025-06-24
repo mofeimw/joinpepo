@@ -1,0 +1,172 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Meet the Chess Pieces",
+      "intro": "Hello, little champions! Welcome to your first chess lesson. Chess is a fun thinking game and is about making smart moves.",
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "Let me ask me you something first: Do you know what this is?",
+          "options": [
+            "A chessboard",
+            "A square board",
+            "A Video game"
+          ],
+          "answer": 0,
+          "lesson": "Let me introduce you to the stars of the chess world. Meet the king, he wears the tall crown and comes with a cross."
+        },
+        {
+          "id": 2,
+          "prompt": "Do you know what piece is this?",
+          "options": [
+            "Queen",
+            "King",
+            "Knight"
+          ],
+          "answer": 1,
+          "lesson": "Lets meet the Queen. She wears a princess crown."
+        },
+        {
+          "id": 3,
+          "prompt": "What piece is this?",
+          "options": [
+            "Rook",
+            "Queen",
+            "Pawn"
+          ],
+          "answer": 1,
+          "lesson": "Pawns are the little soldiers with the round tops."
+        },
+        {
+          "id": 4,
+          "prompt": "What piece is this?",
+          "options": [
+            "King",
+            "Pawn",
+            "Queen"
+          ],
+          "answer": 1,
+          "lesson": "The Knight looks like a little horse."
+        },
+        {
+          "id": 5,
+          "prompt": "Which piece is this?",
+          "options": [
+            "Knight",
+            "Bishop",
+            "Rook"
+          ],
+          "answer": 0,
+          "lesson": "The Bishop looks like it is wearing a little hat and is tall and thin."
+        },
+        {
+          "id": 6,
+          "prompt": "Which piece is this?",
+          "options": [
+            "Bishop",
+            "Rook",
+            "Knight"
+          ],
+          "answer": 0,
+          "lesson": "The Rook looks like a small castle and stand in the corners."
+        },
+        {
+          "id": 7,
+          "prompt": "Which piece is this?",
+          "options": [
+            "Knight",
+            "Rook",
+            "Pawn"
+          ],
+          "answer": 1,
+          "lesson": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Where do the Pieces Go?",
+      "intro": "Let's set up the board before we play. There are two colors in chess, white and black, One player uses white pieces and the other player uses black pieces.",
+      "questions": [
+        {
+          "id": 1,
+          "prompt": "How many different colors of chess pieces are there?",
+          "options": [
+            "One",
+            "Two",
+            "Three"
+          ],
+          "answer": 1,
+          "lesson": "Now let's start placing the pieces. First, we place the pawns. All the pawns line up together in one row. They go on the second line of your chessboard."
+        },
+        {
+          "id": 2,
+          "prompt": "In what line do all the pawns line up?",
+          "options": [
+            "Line 1",
+            "Line 2",
+            "Line 3"
+          ],
+          "answer": 1,
+          "lesson": "Let's place the rooks. Each player has two rooks. The rooks go in the corners of the board."
+        },
+        {
+          "id": 3,
+          "prompt": "Where does the rook go?",
+          "options": [
+            "Corner",
+            "Middle",
+            "Next to the King"
+          ],
+          "answer": 0,
+          "lesson": "Now we place the knights. Each knight goes next to a rook. One knight stands next to the left rook. One knight stands next to the right rook."
+        },
+        {
+          "id": 4,
+          "prompt": "Where does the knight go?",
+          "options": [
+            "Middle",
+            "Next to the pawn",
+            "Next to the rook"
+          ],
+          "answer": 2,
+          "lesson": "Now we place the bishops. Each bishop goes next to a knight. There are two bishops, one on each side."
+        },
+        {
+          "id": 5,
+          "prompt": "Where does the bishop go?",
+          "options": [
+            "Next to the knight",
+            "In front of the pawn",
+            "On a corner"
+          ],
+          "answer": 0,
+          "lesson": "Now let's place the queen. The queen goes in the middle. She always goes on her own color. White queen on a white square. Black queen on a black square."
+        },
+        {
+          "id": 6,
+          "prompt": "Where does the queen go?",
+          "options": [
+            "On her own color",
+            "On a dark square",
+            "Next to a pawn"
+          ],
+          "answer": 0,
+          "lesson": "The last piece is the king. The king always stands right next to the queen."
+        },
+        {
+          "id": 7,
+          "prompt": "Where does the king go?",
+          "options": [
+            "In the corner",
+            "Next to the queen",
+            "On a black square"
+          ],
+          "answer": 1,
+          "lesson": ""
+        }
+      ]
+    }
+  ]
+}

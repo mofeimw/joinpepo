@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Learning Game</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body id="roadmap">
+    <div class="game-container">
+
+        <div class="roadmap">
+            <!-- Present at top - clickable only when all levels completed -->
+            % all_completed = len(progress["completed_levels"]) == 5
+            % if all_completed:
+                <div class="present unlocked" onclick="window.location.href='/select_toy/parent_request'"><img src="static/images/robux.png"></div>
+            % else:
+                <div class="present locked"><img src="static/images/robux.png"></div>
+            % end
+
+            <!-- Staggered levels -->
+            % levels = list(range(5, 0, -1))
+            % for level in levels:
+                % is_unlocked = level == 1 or level-1 in progress["completed_levels"]
+                % is_completed = level in progress["completed_levels"]
+                % if is_completed:
+                    <div class="level completed" id="level{{level}}" onclick="window.location.href='/lesson/{{level}}/1'"><img src="static/images/level-done.png">{{level}}</div>
+                % elif is_unlocked:
+                    <div class="level" id="level{{level}}" onclick="window.location.href='/lesson/{{level}}/1'"><img src="static/images/level-current.png"></div>
+                % else:
+                    <div class="level locked" id="level{{level}}"><img src="static/images/level-locked.png"></div>
+                % end
+            % end
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

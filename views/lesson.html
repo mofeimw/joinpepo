@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Lesson</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="character">
+            <div class="character-box"></div>
+        </div>
+
+        <div class="lesson-container">
+            <h2>LESSON {{lesson_num}}</h2>
+
+            <div class="lesson-content">
+                <p>{{lesson_content}}</p>
+            </div>
+
+            <div class="next-button">
+                <div class="arrow" onclick="window.location.href='/game/{{level}}/{{lesson_num}}'">Next</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/lesson.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toy Selection</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+    </head>
+    <body>
+        % include('header.html', l=l)
+
+        <div class="toy-selection">
+            <h1>toy shop</h1>
+            <div class="toy-list">
+                % target_url = '/signup' if context=='signup' else '/parent_request'
+
+                <div class="toy-item">
+                    <img src="/static/images/actual-toys/1.jpg" class="actual-toy"/>
+                    <div class="toy-info">
+                        <h2>Remote Control Robot - Interactive Smart Robot with Voice Controls, Programmable Actions, LED Lights and Rechargeable Battery</h2>
+                        <a href="{{target_url}}" class="button">get now</a>
+                    </div>
+                </div>
+                <div class="toy-item">
+                    <img src="/static/images/actual-toys/3.jpg" class="actual-toy"/>
+                    <div class="toy-info">
+                        <h2>Princess Castle Dollhouse - 3-Story Folding Palace with Furniture, Lights, and 4 Royal Family Dolls, Easy Assembly Required</h2>
+                        <a href="{{target_url}}" class="button">get now</a>
+                    </div>
+                </div>
+                <div class="toy-item">
+                    <img src="/static/images/actual-toys/2.jpg" class="actual-toy"/>
+                    <div class="toy-info">
+                        <h2>Dinosaur Action Figure Set - 12 Realistic Dinosaurs with Activity Play Mat and Educational Fact Cards, Perfect for Imaginative Play</h2>
+                        <a href="{{target_url}}" class="button">get now</a>
+                    </div>
+                </div>
+                <div class="toy-item">
+                    <img src="/static/images/actual-toys/4.jpg" class="actual-toy"/>
+                    <div class="toy-info">
+                        <h2>Science Experiment Kit - 120+ STEM Activities and Experiments with Lab Equipment, Safe Chemicals and Detailed Instruction Manual</h2>
+                        <a href="{{target_url}}" class="button">get now</a>
+                    </div>
+                </div>
+                <div class="toy-item">
+                    <img src="/static/images/actual-toys/5.jpg" class="actual-toy"/>
+                    <div class="toy-info">
+                        <h2>Art Supplies Set - Complete Drawing and Painting Kit with 24 Colored Pencils, 12 Markers, 24 Watercolors, Sketchpad and Carrying Case</h2>
+                        <a href="{{target_url}}" class="button">get now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+         function showSurpriseThenSpiral(targetHref) {
+             const overlay = document.createElement('div');
+             overlay.className = 'surprise-overlay';
+
+             const img = document.createElement('img');
+             img.src = '/static/images/present-locked.png';
+             overlay.appendChild(img);
+
+             const msg = document.createElement('div');
+             msg.className = 'message';
+             msg.textContent = 'We have a surprise gift for you!';
+             overlay.appendChild(msg);
+
+             const btn = document.createElement('button');
+             btn.className = 'get-yours';
+             btn.textContent = 'Get Yours';
+             overlay.appendChild(btn);
+
+             document.body.appendChild(overlay);
+
+             btn.addEventListener('click', () => {
+                 // remove message & button
+                 msg.remove();
+                 btn.remove();
+
+                 // trigger spiral+zoom
+                 overlay.classList.add('spiral-zoom');
+                 img.addEventListener('animationend', () => {
+                     // once done, navigate
+                     window.location.href = targetHref;
+                 }, { once: true });
+             }, { once: true });
+         }
+
+         document.addEventListener('DOMContentLoaded', () => {
+             document.querySelectorAll('a.button').forEach(link => {
+                 link.addEventListener('click', e => {
+                     const href = link.getAttribute('href');
+                     // only intercept /signup links
+                     if (href === '/signup') {
+                         e.preventDefault();
+                         showSurpriseThenSpiral(href);
+                     }
+                 });
+             });
+         });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Game Intro</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="intro-container">
+        <h1>LEVEL {{level}}</h1>
+        
+        <div class="intro-content-text">
+            <p class="intro-text">{{intro_text}}</p>
+        </div>
+        
+        <a href="/lesson/{{level}}/{{1 if level==1 else 7 if level==2 else 14 if level==3 else 19 if level==4 else 24}}" class="start-game-button">START LEARNING</a>
+    </div>
+</body>
+</html>

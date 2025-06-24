@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spin - Pepo</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <style>
+            /* Initially hide the spin content */
+            .spin {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease, transform 0.8s ease;
+            }
+            
+            /* Class to be added when video ends */
+            .spin.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            /* Initially hide the video overlay */
+            .video-overlay {
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+            
+            /* Class to be added when video ends */
+            .video-overlay.visible {
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body id="spin">
+        <video autoplay muted playsinline id="bg-video">
+            <source src="static/images/spin.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="spin">
+            <h1>Congratulations, you can win this Robux!</h1>
+            <img src="static/images/robux.png">
+            <a href="/start" class="button">Earn It Now</a>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('bg-video');
+                const spinContent = document.querySelector('.spin');
+                const videoOverlay = document.querySelector('.video-overlay');
+                
+                video.addEventListener('ended', function() {
+                    // When video ends, make both the content and overlay visible with animation
+                    spinContent.classList.add('visible');
+                    videoOverlay.classList.add('visible');
+                });
+            });
+        </script>
+    </body>
+</html>

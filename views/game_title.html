@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="intro-container">
+        <h1>GAME {{level}}: {{title}}</h1>
+
+        <div class="intro-content">
+            <div class="character-section">
+                <div class="character-box"></div>
+            </div>
+
+            <div class="board-section">
+                <div class="chess-board-placeholder"></div>
+            </div>
+        </div>
+
+        <button class="start-game-button" onclick="window.location.href='/intro/{{level}}'">
+            CONTINUE
+        </button>
+    </div>
+</body>
+</html>

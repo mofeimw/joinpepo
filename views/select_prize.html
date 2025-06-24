@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Your Prize</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    % include('header.html', l=l)
+
+    <div class="prize-selection">
+        <h1>what do you want to win?</h1>
+
+        <div class="prize-options">
+            <div class="prize-box">
+                <div class="prize-content-wrapper">
+                    <img class="prize-content" src="/static/images/games.png">
+                </div>
+                <h2>games</h2>
+            </div>
+
+            <div class="prize-box" onclick="window.location.href='/select_toy/signup'">
+                <div class="prize-content-wrapper">
+                    <img class="prize-content" src="/static/images/toys.png">
+                </div>
+                <h2>toys</h2>
+            </div>
+
+            <div class="prize-box">
+                <div class="prize-content-wrapper">
+                    <img class="prize-content" src="/static/images/money.png">
+                </div>
+                <h2>cash</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

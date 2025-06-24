@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parents Consent - Pepo</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="parent-portal">
+        <h1>your kid is a genius wohoo!</h1>
+
+        <div class="portal-form">
+            <form action="/process_parent_form" method="post">
+                <h3>progress report:</h3>
+
+                <img src="/static/images/progress.png" class="progress"/>
+
+                <div class="consent-checkbox">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I consent to my child receiving toys as rewards for completing educational activities. I understand that I am responsible for approving any toy selections and purchases.</label>
+                </div>
+
+                <button type="submit" class="submit-btn">let's appreciate them!</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

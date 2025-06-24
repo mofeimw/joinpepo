@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess Learning Game</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="character">
+            <div class="character-box"></div>
+        </div>
+
+        <div class="question-container">
+            <h2>{{question['question']}}</h2>
+
+            <div class="options">
+                % for i in range(len(question['options'])):
+                <div class="option" data-index="{{i}}">
+                    {{question['options'][i]['text']}}
+                </div>
+                % end
+            </div>
+
+            <div class="submit-button" style="display: block;">
+                <button id="submit-answer">GO!</button>
+            </div>
+
+            <div class="next-button" style="display: none;">
+                % if is_last_question:
+                <div class="arrow" onclick="window.location.href='/complete_level/{{level}}'">FINISH</div>
+                % else:
+                <div class="arrow" onclick="window.location.href='/lesson/{{level}}/{{question_index+1}}'">NEXT</div>
+                % end
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,1444 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap'); */
+@font-face {
+  font-family: 'Staatliches';
+  src: url('/static/fonts/Staatliches.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Staatliches", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5vh;
+
+  /* background-color: purple; */
+  background-color: #733EF4;
+  /* full‐screen SVG background */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* optional: ensure it always fills the viewport height */
+  min-height: 100vh;
+
+  color: white;
+}
+
+* {
+  font-weight: 300;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3vh 3rem;
+  box-sizing: border-box;
+}
+
+.header .logo {
+  font-size: 4.0rem;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+button, .button {
+  padding: 1rem 2.7rem;
+  font-family: "Chewy", sans-serif;
+  font-family: "Staatliches", sans-serif;
+  border-radius: 36px;
+  border: 0;
+  outline: 0;
+  font-size: 1.3rem;
+  background: #8FCCD8;
+  cursor: pointer;
+  border: 2px solid black;
+  transition: filter 0.2s ease-in-out;
+}
+
+button:hover,
+.button:hover {
+  filter: brightness(88%);
+}
+
+.hero {
+  position: absolute;
+  left: 50%;              /* start at 50% of the viewport width */
+  top: 36%;            /* place the bottom edge up from the viewport bottom */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* center children horizontally */
+  text-align: center;     /* for good measure on the h1 */
+}
+
+.hero .start {
+  margin-bottom: 0;
+  font-size: 1.9rem;
+}
+
+.hero h1 {
+  font-size: 4.4rem;
+  margin-top: 0.8rem;    /* space between the button and the heading */
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  background: #C8FF45;
+}
+
+/* new wrapper around the button */
+.start-wrapper {
+  position: relative;
+  display: inline-block;  /* shrink-wrap to the button’s width */
+}
+
+/* the avatar */
+.start-wrapper .jump {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-44%) rotate(18deg);
+  bottom: 100%;           /* place it just above the wrapper */
+  /* pull it down a bit so it “hangs” over the bottom edge */
+  margin-bottom: -36px;    /* tweak this to taste */
+  pointer-events: none;   /* so clicks go straight to the button */
+  display: block;
+  width: 20vw;
+  height: auto;
+}
+
+
+/* container */
+.prize-selection {
+  max-width: 900px;
+  padding: 2rem;
+  margin: 0 auto;
+  /* background: #2f573c;          /\* dark green behind the eggs *\/ */
+  border-radius: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+/* flex layout for the three options */
+.prize-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0;
+}
+
+/* each box is clickable and centered */
+.prize-box {
+  flex: 1;
+  cursor: pointer;
+}
+
+.prize-selection h1 {
+  margin-bottom: 2rem;
+  font-size: 3.6rem;
+  padding: 0;
+  margin-top: 0;
+}
+
+/* the actual egg shape */
+.prize-content {
+  width: 250px;
+  height: 330px;
+  margin: 0 auto 0.75rem;
+  background: #f5fcff;        /* light “egg‐white” fill */
+  /* egg shape: top 60%, bottom 40% */
+  /* border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%; */
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* the label under each egg */
+.prize-box h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+
+/* outer container */
+.toy-selection {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  font-family: "Chewy", serif;
+  font-family: "Staatliches", sans-serif;
+  padding: 2rem;
+}
+
+/* section title */
+.toy-selection h1 {
+  margin: 0 0 1rem;
+  font-size: 2.7rem;
+  color: black;
+  text-align: center;
+}
+
+/* list of items stacked with space */
+.toy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* each row */
+.toy-item {
+  display: flex;
+  align-items: center;
+  /* background: #214b2f;       /\* dark green card *\/ */
+  border: 2px solid black;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* image placeholder on the left */
+.toy-image-placeholder {
+  flex: 0 0 100px;
+  height: 100px;
+  background: #f5fcff;        /* light “egg-white” */
+  border-radius: 1rem;
+}
+
+/* text + button on the right */
+.toy-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* toy title */
+.toy-info h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.4rem;
+  color: black;
+  line-height: 1.3;
+  padding: 1rem;
+}
+
+.toy-item .button {
+  align-self: flex-end;  /* stop it from stretching horizontally */
+  display: inline-block;   /* shrink to its content */
+  width: auto;             /* ensure no inherited width */
+  background: #C8FF45;
+  color: black;
+}
+
+
+/* outer wrapper */
+.signup-container {
+  max-width: 500px;
+  margin: 8vh auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  text-align: center;
+  font-family: "Chewy", serif;
+  font-family: "Staatliches", sans-serif;
+  color: black;
+}
+
+.signup-container.actually-signup {
+  margin: 1vh auto;
+}
+
+/* big “login” title */
+.signup-container h1 {
+  margin: 0 0 1.2rem;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* space the inputs out */
+.signup-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* pill‐shaped inputs */
+.signup-form input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  background: white;
+  border: 2px solid black;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: black;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* primary button */
+.submit-btn[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid black;
+  border-radius: 2rem;
+  background: #C8FF45;
+  color: black;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* secondary “sign up” as link‐style button */
+.submit-btn[type="button"] {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: "Chewy", serif;
+  font-family: "Staatliches", sans-serif;
+  padding: 0;
+}
+
+.error-message {
+  color: #db2c2c;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+/*────────────────────────────────────
+   GLOBAL & RESET
+────────────────────────────────────*/
+#app-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+/*────────────────────────────────────
+   ROADMAP
+────────────────────────────────────*/
+.roadmap-wrapper {
+  text-align: center;
+}
+
+#roadmap {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* or any specific height */
+  background: url('/static/images/abyss.png') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.level,
+.present {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+}
+
+.level.completed {
+  /* background: #e67e22; */
+  color: white;
+}
+
+.level.locked {
+  /* background: #ccc; */
+  color: #777;
+  cursor: default;
+}
+
+.present.unlocked {
+  /* background: #2ecc71; */
+  color: white;
+  animation: float 3s ease-in-out infinite;
+}
+
+.present.locked {
+  /* background: #bdc3c7; */
+  color: white;
+  cursor: default;
+}
+
+/* 2) Take every pin out of the normal flow & center it on its coords */
+.roadmap .level,
+.roadmap .present {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 3) Style completed vs locked */
+/* .level.completed { background: #e67e22; color: #fff; } */
+/* .level.locked    { background: #ccc;     color: #777; cursor: default; } */
+/* .present.unlocked{ background: purple;  color: #fff; } */
+/* .present.locked  { background: #bdc3c7;  color: #fff; cursor: default; } */
+
+/* 4) Position the “present” X (first child of .roadmap) */
+/* .roadmap > .present { */
+/*   right: 20%; */
+/*   top: 18%; */
+/*   width: 100px; */
+/* } */
+
+/* 5) Use nth-of-type on .level to place each lesson dot */
+/*    nth-of-type(1) is the first .level in the DOM (highest ID if you’re looping backwards) */
+
+/* “1” is the very last child of .roadmap - well idk anymore bruh i flipped ts on its head */
+.roadmap > .level:nth-last-child(1) { right: 28%; bottom: 13%; }
+
+/* “2” is the next-to-last child */
+.roadmap > .level:nth-last-child(2) { right: 18%; bottom: 52%; }
+
+/* “3” */
+.roadmap > .level:nth-last-child(3) { right: 23%; bottom: 36%; }
+
+/* …and so on… */
+.roadmap > .level:nth-last-child(4) { right: 18%; bottom: 18%; }
+.roadmap > .level:nth-last-child(5) { right: 27%; bottom: 5%; }
+
+
+/* container already relative & background'd */
+
+/* 1) Give each .level a fixed square for the pin */
+.roadmap .level {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+
+/* 2) Draw the teardrop with a ::before */
+.roadmap .level::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: #e67e22;              /\* pin color *\/ */
+  /* border-radius: 50% 50% 50% 0;      /\* quarter‐circle pinch *\/ */
+  /* transform: rotate(-45deg); */
+  top: 0;
+  left: 0;
+}
+
+.roadmap .level img {
+  width: 100%;
+  height: auto;
+}
+
+/* 3) Inner circle for the number */
+.roadmap .level span {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  /* center it in the middle of the pin’s “head” */
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+.roadmap .lock {
+  position: absolute;
+  width: 40px !important;
+  height: 40px;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+/* 4) variants: completed vs locked */
+/* .roadmap .level.completed::before  { background: black; } */
+/* .roadmap .level.completed span  { background: green; } */
+/* .roadmap .level.locked::before     { background: #95a5a6; cursor: default; } */
+/* .roadmap .level.locked span  { background: gray; } */
+/* .roadmap .level.locked span        { color: #555; } */
+
+/*────────────────────────────────────
+   LESSON VIEW
+────────────────────────────────────*/
+.lesson-container {
+  text-align: center;
+  padding: 0;
+  /* background: red; */
+  height: 85vh;
+  width: 70vw;
+}
+
+.lesson-content {
+  display: block;
+}
+
+/* text block */
+.lesson-text {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.4;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+/* board / piece image */
+.lesson-image img {
+  width: 30%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
+
+.avatar-image {
+  position: absolute;
+  left: 7%;
+  top: 15%;
+}
+
+/*────────────────────────────────────
+   QUESTION VIEW
+────────────────────────────────────*/
+.question-container {
+  text-align: center;
+  padding: 2rem;
+  /* reserve extra space for the continue button so showing it won’t resize */
+  padding-bottom: 8rem;
+}
+
+/* full-width prompt */
+.question-prompt {
+  text-align: center;
+  font-size: 2.6rem;
+  margin: 1.3rem auto;
+}
+
+.question-content .lesson-image img {
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0;
+  margin-bottom: 0.4rem;
+}
+
+body .options button {
+  display: block;
+  margin: 1rem auto;
+  width: 50%;
+  background: white;
+}
+
+body .game-container .options button.correct-answer {
+  background: #8edb56 !important;
+  color: black !important;
+}
+body .game-container .options button.wrong-answer {
+  background: #FF9998 !important;
+}
+
+/*────────────────────────────────────
+   COMPLETION VIEW
+────────────────────────────────────*/
+.completion-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.completion-container h1 {
+  background: purple;
+  padding: 3rem !important;
+  border-radius: 1rem;
+}
+
+.completion-container button {
+  margin-top: 4rem;
+}
+
+.top-button {
+  position: fixed;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.audio-play-btn {
+  top: 2rem;
+  left: 9rem;
+  background: #C8FF45;
+}
+
+.back-to-roadmap {
+  top: 2rem;
+  left: 2rem;
+  background: #8FCCD8;
+}
+
+.home-btn {
+  top: 2rem;
+  right: 2rem;
+  background: #FF9998;
+}
+
+.game-container {
+  text-align: center;
+  padding: 0;
+  /* background: red; */
+  height: 80vh;
+  width: 70vw;
+  margin-top: 8vh;
+  color: white;
+}
+
+.game-container button {
+  /* background: #C8FF45; */
+}
+
+.game-container h1 {
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.avatar-image {
+  width: 300px;
+  margin: 0;
+}
+
+.intro-text {
+  margin-top: -3rem;
+  font-size: 1.5rem;
+}
+
+.request-content {
+  margin: 37vh auto;
+  color: white;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.request-content button {
+  background: #FF9998;
+}
+
+.request-content h1 {
+  font-size: 5rem;
+}
+
+.parent-portal {
+  max-width: 666px;
+  margin: 0 auto;
+  margin-top: 14vh;
+  padding: 3rem;
+  background: white;
+  color: black;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.parent-portal h1 {
+  font-size: 2.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.parent-portal h3 {
+  font-size: 1.5rem;
+}
+
+.consent-checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.consent-checkbox input {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.consent-checkbox label {
+  font-size: 0.62rem;
+  margin-top: 0.3rem;
+}
+
+/* f it */
+.lets-play {
+  width: 600px;
+  height: auto;
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.present img {
+  width: 200px;
+}
+
+.victory {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.victory-container .victory-button {
+  display: block;
+  margin: 0 auto;
+  position: static;
+  margin-top: 3rem;
+  background: #C8FF45;
+}
+
+.victory-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.toy {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.95;
+  animation: floatDrift 6s ease-in-out infinite;
+  width: 160px;
+}
+
+/* pick each .toy by its index */
+.toy:nth-of-type(1) {
+  top: 40%;
+  right: 6%;
+  animation-duration: 6s;
+  animation-delay: 2.5s;
+}
+.toy:nth-of-type(2) {
+  bottom: 5%;
+  right: 40%;
+  animation-duration: 5s;
+  animation-delay: 3.32s;
+}
+.toy:nth-of-type(3) {
+  bottom: 6%;
+  right: 6%;
+  animation-duration: 5.5s;
+  animation-delay: 0s;
+}
+.toy:nth-of-type(4) {
+  top: 15%;
+  right: 10%;
+  animation-duration: 6.5s;
+  animation-delay: 1.3s;
+}
+.toy:nth-of-type(5) {
+  top: 21%;
+  left: 8%;
+  animation-duration: 4.5s;
+  animation-delay: 0.77s;
+}
+.toy:nth-of-type(6) {
+  bottom: 12%;
+  left: 8%;
+  animation-duration: 5.2s;
+  animation-delay: 2.8s;
+}
+.toy:nth-of-type(7) {
+  bottom: 18%;
+  right: 23%;
+  animation-duration: 6.2s;
+  animation-delay: 0.2s;
+}
+.toy:nth-of-type(8) {
+  bottom: 13%;
+  left: 30%;
+  animation-duration: 5.8s;
+  animation-delay: 1.2s;
+}
+
+/* simple float animation */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-7px); }
+}
+
+@keyframes floatDrift {
+  0%, 100%   { transform: translate(0, 0) rotate(0deg); }
+  25%        { transform: translate(6px, -13px) rotate(3deg); }
+  50%        { transform: translate(-2px, 2px) rotate(-2deg); }
+  75%        { transform: translate(2px, -6px) rotate(2deg); }
+}
+
+.continue-button {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.actual-toy {
+  flex: 0 0 150px;
+  height: 150px;
+  border-radius: 1rem;
+}
+
+/* keyframes for the present flying up, spinning & growing */
+@keyframes present-anim {
+  0% {
+    transform: translateY(100%) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(0) scale(1) rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(500) rotate(720deg);
+    opacity: 1;
+  }
+}
+
+/* full-screen overlay, starts transparent */
+.present-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+  transition: background-color 0.5s ease-in;
+}
+
+/* once we add this class, it morphs to purple */
+.present-overlay.purple {
+  background-color: purple;
+}
+
+/* the present image starts at bottom-center */
+.present-overlay img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: present-anim 2.7s ease-in-out forwards;
+}
+
+.prize-content-wrapper {
+  display: inline-block;            /* shrink-wrap to your image */
+  overflow: hidden;                 /* clip any overflow */
+  transition: transform 0.3s ease;  /* for the lift */
+}
+
+.prize-content-wrapper img {
+  display: block;
+  filter: brightness(72%);          /* darken to 60% */
+  transition: filter 0.3s ease;     /* for the darken */
+}
+
+.prize-content-wrapper {
+  transform: translateY(-6px);      /* lift up */
+}
+
+.prize-content-wrapper:hover img {
+  filter: brightness(100%);          /* lighten */
+}
+
+.icon {
+  width: 40px;
+  background: 0;
+}
+
+.progress {
+  width: 200px;
+  height: 200px;
+  margin: 2rem auto;
+  display: block;
+}
+
+.connector-line {
+  pointer-events: none;
+  overflow: visible;
+  z-index: -6969;
+}
+
+@keyframes shake {
+  0%,100% { transform: translate(-50%, -50%); }
+  20%,60% { transform: translate(-51%, -49%); }
+  40%,80% { transform: translate(-49%, -51%); }
+}
+
+.locked:hover {
+  animation: shake 0.3s ease-in-out !important;
+}
+
+@keyframes depress {
+  to {
+    transform: translate(-50%, -47%); /* press down */
+  }
+}
+
+.level.completed:hover {
+  animation: depress 0.1s ease-in-out forwards;
+}
+
+.curriculum img {
+  width: 370px;
+  height: 400px;
+  border-radius: 2rem;
+}
+
+.actual-lesson {
+  margin-top: 11rem;
+}
+
+/* ─── Step 1: Surprise Overlay ─── */
+.surprise-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.69);        /* needed for the blur to be visible */
+    -webkit-backdrop-filter: blur(5px);    /* Safari */
+    backdrop-filter: blur(5px);    /* modern browsers */
+    pointer-events: all;
+    z-index: 9999;
+}
+.surprise-overlay img {
+    width: 270px;
+    opacity: 0;
+    transform: translateY(200vh) scale(0);
+    animation: gift-pop 0.8s ease-out forwards 0.2s;
+}
+@keyframes gift-pop {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.surprise-overlay .message {
+    margin-top: 0.2rem;
+    font-size: 3.3rem;
+    color: #fff;
+    opacity: 0;
+    animation: fade-in 0.6s ease-out forwards 1s;
+}
+.surprise-overlay .get-yours {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: #C8FF45;
+    color: black;
+    opacity: 0;
+    animation: fade-in 0.6s ease-out forwards 1.2s;
+}
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
+/* ─── Step 2: Spiral & Zoom ─── */
+@keyframes present-anim {
+    0% {
+        transform: translateY(0) scale(1) rotate(360deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1000) rotate(1080deg);
+        opacity: 1;
+    }
+}
+.surprise-overlay.spiral-zoom img {
+    /* override gift-pop with our spiral-zoom */
+    animation: present-anim 2s ease-in-out forwards;
+    transform-origin: center center;
+}
+
+.success-message {
+  text-align: center;
+}
+
+.success-message h1 {
+  font-size: 3.6rem;
+  margin-top: 13rem;
+}
+
+.success-message p {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.game-container .options .selected {
+  background: #b3dfe8 !important;
+}
+
+/* ── iPad (portrait & landscape) ── */
+@media screen and (min-width: 700px) and (max-width: 1300px) {
+  .lets-play {
+    width: 36vw;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+  }
+
+  .roadmap .level {
+    width: 90px;
+    height: 90px;
+  }
+
+  .roadmap .present img {
+    width: 155px;
+    height: 155px;
+  }
+
+
+  .roadmap > .present {
+    right: 26%;
+    top: 19%;
+    width: 100px;
+  }
+  .roadmap > .level:nth-last-child(2) { right: 18%; bottom: 53%; }
+  .roadmap > .level:nth-last-child(3) { right: 23%; bottom: 39%; }
+  .roadmap > .level:nth-last-child(4) { right: 18%; bottom: 23%; }
+  .roadmap > .level:nth-last-child(5) { right: 27%; bottom: 13%; }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1300px) {
+  /* 1) Scale down the whole lesson/question panel and center it */
+  .game-container,
+  .lesson-container,
+  .question-container {
+    max-width: 90vw;               /* never wider than viewport */
+    margin: 0 auto;                /* center horizontally */
+  }
+
+  /* 2) Put “Continue” back into the flow, centered under the content */
+  .continue-button {
+    position: static !important;   /* undo your fixed/absolute */
+    margin: 2rem auto !important;  /* center with auto‐margins */
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  /* 3) If you have a wrapper around it, center that too */
+  .continue-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+.avatar-image {
+    position: fixed !important;
+    top: auto          !important;
+    bottom: 25%    !important;
+    left: 0         !important;
+    right: auto     !important;
+    transform: none !important;
+    margin: 0       !important;
+    z-index: 9999   !important;
+  }
+
+  .hero {
+    top: 26%;            /* place the bottom edge up from the viewport bottom */
+  }
+
+  .intro-container {
+    margin-top: 6rem;
+  }
+}
+
+#games-background {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* or any specific height */
+  background: url('/static/images/background.png') no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.giftbox h1 {
+  text-align: center;
+}
+
+.giftbox .prize-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+  gap: 2rem;
+  margin-top: 0;
+  margin-inline: auto;
+  margin: 0 auto;
+  padding: 0 20vw;
+}
+
+.giftbox .prize-box {
+  cursor: pointer;
+  text-align: center;
+}
+
+.giftbox .prize-content {
+  width: 200px;
+  height: 210px;
+  margin: 0 auto 0.75rem;
+  background: #f5fcff;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.giftbox .prize-box h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.giftbox h1 {
+  margin: 0 0 2rem;
+  font-size: 2.8rem;
+}
+
+#new-logo {
+  color: white;
+  font-size: 4.0rem;
+  margin: 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.start {
+  margin-top: 8vh !important;
+}
+
+.spin {
+  text-align: center;
+}
+
+.spin h1 {
+  font-size: 3rem;
+  margin-top: 10vh;
+}
+
+.spin img {
+  margin: 0 auto;
+  display: block;
+  height: 45vh;
+  margin-bottom: 8vh;
+}
+
+.spin a {
+  color: black;
+  background: #FFFF00;
+}
+
+#bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  margin: 0;
+  padding: 0;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+#spin {
+  padding-bottom: 0 !important;
+  overflow: hidden !important;
+}
+
+#level1 {
+  left: 30%; bottom: 6%;
+}
+
+#level2 {
+  left: 42%; bottom: 27%;
+}
+
+#level3 {
+  right: 22%; bottom: 48%;
+}
+
+#level4 {
+  right: 13%; bottom: 60%;
+}
+
+#level5 {
+  display: none;
+}
+
+.present img {
+  width: 90px;
+  height: auto;
+}
+
+.roadmap > .present {
+  right: 17%;
+  top: 12%;
+  width: 100px;
+}
+/* Game page styles */
+.question-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.question-container h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.option {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.option.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.option.incorrect {
+    background-color: #ffb3b3;
+}
+
+.next-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.homepage-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #673ab7;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.explanation {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.option.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.option.incorrect {
+    background-color: #ffb3b3;
+}
+
+.option.selected {
+    border: 3px solid #2196F3;
+}
+
+.next-button .arrow {
+    width: 80px;
+    height: 50px;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Game title and intro screens */
+.intro-container {
+    background-color: #8a2be2;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.intro-content-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 50px auto;
+}
+
+.character-section {
+    text-align: left;
+    margin-right: 50px;
+}
+
+.character-box {
+    width: 150px;
+    height: 150px;
+    background-color: #ff9933;
+    border-radius: 20px;
+}
+
+.intro-text {
+    max-width: 300px;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.board-section {
+    width: 300px;
+}
+
+.chess-board-placeholder {
+    width: 300px;
+    height: 300px;
+    background-color: #b38b6d;
+}
+
+.start-game-button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.homepage-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #673AB7;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Submit button styling */
+.submit-button {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.submit-button button {
+    background-color: #ff7b00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button button:hover {
+    background-color: #e56f00;
+}
+
+.submit-button button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.option.selected.incorrect {
+  background: red !important;
+}
+.option.selected.correct {
+  background: green !important;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Curriculum</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    % include('header.html', l=l)
+
+    <div class="prize-selection">
+        <h1>Select Curriculum</h1>
+
+        <div class="prize-options">
+            <div class="prize-box curriculum" onclick="window.location.href='/select_prize'">
+                <div class="prize-content-wrapper">
+                    <img class="prize-content" src="/static/images/chess.png">
+                </div>
+                <h2>chess</h2>
+            </div>
+
+            <div class="prize-box curriculum">
+                <div class="prize-content-wrapper">
+                    <img class="prize-content" src="/static/images/history.png">
+                </div>
+                <h2>history</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
