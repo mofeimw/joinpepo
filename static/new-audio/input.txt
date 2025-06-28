@@ -1,0 +1,92 @@
+﻿A. Six
+B. Eight
+C. Ten
+Answer: B. Eight
+Awesome. Your chess kingdom is ready for battle.
+________________
+
+
+Lesson 5: Special Rules
+Today we unlock secret moves.
+Info 1
+ Castling is a team move. The King steps two squares toward a Rook, and the Rook hops next to the King. Both pieces must be unmoved, and nothing sits between them.
+Question 1
+ When are you allowed to castle?
+  
+
+A. After the King has moved once
+B. When pieces sit between the King and the Rook
+C. When both King and Rook have never moved, and the path is clear
+
+
+Answer: C. When both King and Rook have never moved, and the path is clear
+Info 2
+ Pawn Promotion is a reward. When a Pawn reaches the other side, it can become a Queen, Rook, Bishop, or Knight.
+Question 2
+ Which piece can a Pawn NOT turn into?
+  
+
+A. Queen
+B. Knight
+C. King
+Answer: C. King
+Info 3
+ En Passant is a sneaky pawn capture. If an enemy Pawn dashes two squares and lands beside your Pawn, you may capture it as if it moved only one square. You must do this right away.
+Question 3
+ When can you use En Passant?
+  
+
+A. Any time after the double step
+B. Only on your very next move
+C. Only with Knights
+Answer: B. Only on your very next move
+
+
+ These three tricks make games exciting. Practice them to surprise your friends.
+Great job. You just learned chess’s coolest secrets.
+
+
+Lesson 6: Check Checkmate and Good Sportsmanship
+Final lesson champions. Time to win and shake hands.
+Info 1
+ Check means your King is under attack. You must move the block or capture to escape.
+Question 1
+ If your King is in check, you may…
+  
+
+A. Ignore it
+B. Move the block or capture the attacker
+C. Move any random piece
+Answer: B. Move the block or capture the attacker
+Info 2
+ Checkmate means the King is in check and cannot escape. The game ends right away.
+
+
+Question 2
+ What does Checkmate mean?
+  
+
+A. A tie
+B. The game continues
+C. The King has no safe move
+Answer: C. The King has no safe move
+Info 3
+ Stalemate means it is your turn and you have no legal move but you are not in check. The result is a draw.
+Question 3
+ Stalemate results in…
+  
+
+A. A win for White
+B. A draw
+C. A win for Black
+Answer: B. A draw
+Info 4
+ Good sports always shake hands and say good game after the last move.
+Question 4
+ Why shake hands after a game?
+  
+
+A. To show respect
+B. To scare your opponent
+C. To restart the clock
+Answer: A. To show respect

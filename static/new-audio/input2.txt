@@ -1,0 +1,465 @@
+﻿Lesson 1: Meet the Chess Pieces
+
+
+Hello, little champions!
+
+Welcome to your first chess lesson. Chess is a fun thinking game and is about making smart moves. 
+
+
+  
+
+Let me ask you something first: Do you know what this is? 
+
+
+1. A chessboard
+2. A square board 
+3. A Video game
+
+
+Let me introduce you to the stars of the chess world.
+ Meet the king, he wears the tall crown and comes with a cross
+Do you know what piece this is?
+  
+
+A. Queen
+
+B. King
+
+C. Knight
+
+Answer: B. King
+
+
+Lets meet the Queen. She wears a princess crown. 
+
+
+  
+
+
+
+Do you know what piece this is?
+
+
+* A. Rook
+
+* B. Queen
+
+* C. Pawn
+
+Answer: B. Queen
+
+
+Pawns are the little soldiers with the round tops.
+
+  
+
+Do you know what piece this is?
+
+
+
+   * A. King
+
+   * B. Pawn
+
+   * C. Queen
+
+Answer: B. Pawn
+
+
+
+
+The Knight looks like a little horse.. 
+
+
+  
+
+
+
+Question 5: What piece is this?
+
+
+A. Knight
+
+      * B. Bishop
+
+      * C. Rook
+
+Answer: A. Knight
+The Bishop looks like it is wearing a little hat and is tall and thin.
+  
+
+Do you know what piece this is?
+
+
+
+         * A. Bishop
+
+         * B. Rook
+
+         * C. Knight
+
+Answer: A. Bishop
+  
+
+The Rook looks like a small castle and stand in the corners
+Do you know what piece this is?
+
+
+
+            * A. Knight
+
+            * B. Rook
+
+            * C. Pawn
+
+Answer: B. Rook
+
+
+Lesson 2: Where do the Pieces Go?
+Let’s set up the board before we play.
+There are two colors in chess, white and black,
+One player uses white pieces and the other player uses black pieces.
+  
+
+
+
+Question 1: How many different colors of chess pieces are there?
+ A. One
+B. Two
+C. Three
+Answer: Two
+Now let’s start placing the pieces. First, we place the pawns.
+All the pawns line up together in one row. They go on the second line of your chessboard
+
+
+Question 2: In what line do all the pawns line up?
+ A. Line 1
+B. Line 2
+C. Line 3
+Answer: Line 2
+Let’s place the rooks. Each player has two rooks.
+The rooks go in the corners of the board.
+  
+
+Question 3: Where does the rook go?
+ A. Corner
+B. Middle
+C. Next to the King
+Answer: Corner
+Now we place the knights. Each knight goes next to a rook.
+One knight stands next to the left rook. One knight stands next to the right rook.
+  
+
+Question 4: Where does the knight go?
+ A. Middle
+B. Next to the pawn
+C. Next to the rook
+Answer: Next to the rook
+Now we place the bishops. Each bishop goes next to a knight.
+There are two bishops, one on each side.
+  
+
+Question 5: Where does the bishop go?
+ A. Next to the knight
+B. In front of the pawn
+C. On a corner
+Answer: Next to the knight
+Now let’s place the queen. The queen goes in the middle. She always goes on her own color.  White queen on a white square. Black queen on a black square.
+Question 6: Where does the queen go?
+  
+
+
+ A. On her own color
+B. On a dark square
+C. Next to a pawn
+Answer: On her own color
+The last piece is the king. The king always stands right next to the queen.
+Question 7: Where does the king go?
+  
+
+
+ A. In the corner
+B. Next to the queen
+C. On a black square
+Answer: Next to the queen
+
+
+
+
+
+
+
+
+Lesson 3: 
+
+
+Hello again, little champions!
+Now that you’ve met the chessboard and the pieces, it’s time for some fun…
+
+Today, we learn how each piece moves like a superhero on a mission
+
+
+Let's start with the pawn. 
+It moves up only. 
+On its first move, it can go one up or two up. Just like in the picture below
+  
+
+
+But after that, it can only move 1 step up at a time.
+  
+
+
+
+Question 1: How many steps can a pawn move on its first turn?
+A. One
+B. Two
+C. One or Two
+Answer: C. One or Two
+
+
+
+
+  
+
+Now let's look at the rook. It moves in straight lines like up, down, left, or right.
+And it can go as far as it wants in those directions. 
+
+
+  
+
+
+
+Question 3: How does the rook move?
+A. In circles
+B. In straight lines
+C. Diagonally
+Answer: B. In straight lines
+
+
+  
+
+Lets talk about our little horse, the knight. Just like a horse, it can jump over others. It moves like a letter L-shape. Two steps in one direction, then one step sideways.
+
+  
+
+Question 4: What shape does the knight move in?
+A. A circle
+B. An L-shape
+C. A straight line
+Answer: B. An L-shape
+  
+
+Let's talk about our friend Bishop, who always moves sideways. It can go as far as it wants, but like a slanty line. 
+
+
+  
+
+Question 5: How does the bishop move?
+A. In straight lines
+B. Side ways
+C. In an L-shape
+Answer: B. Sideways
+  
+
+
+
+The queen is the strongest piece on the board, and that means the queen can move wherever she wants as far as she wants. Up, down, left, right adn even sideways like bishop…. but it can’t jump like a knight. 
+
+
+  
+
+Question 6: How does the queen move?
+A. Up, down, left, and right
+B. Only straight
+C. Only diagonal
+Answer: A. Straight and Diagonal
+  
+
+Now let's talk about the last piece is The King.  
+The king also moves like a queen, but only he can move one square in any direction, like up, down, left, or right, and sideways
+  
+
+Question 7: How many steps can the king move at a time?
+A. One
+B. Two
+C. As many as he wants
+Answer: A. One
+
+
+Now it's time to learn how to play chess.
+
+
+First, we start off with how to capture enemy pieces.
+Capturing means your piece lands on a square with an enemy piece and takes its place.
+You then remove the enemy piece from the board.
+Question 1: What does it mean to capture a piece?
+  
+
+
+ A. Take the enemy piece off the board
+B. Say hello to it
+C. Jump over it and keep going
+
+
+
+
+
+
+Every piece captures the same way it moves.
+A rook captures in straight lines.
+A bishop captures diagonally.
+A knight jumps to capture!
+
+
+
+
+Question 2: How does a rook capture?
+  
+
+
+ A. In a circle
+B. Diagonally
+C. In straight lines
+ Answer: C
+Question 2: How does a Knight capture?
+  
+
+
+ A. Jumps
+ B. Diagonally
+C. In straight lines
+ Answer: A
+Lesson 4: Setting Up the Board
+Hello again, piece experts. Let us place everyone in the correct starting spots.
+Info 1
+ Place the board so that a white square is in each player’s right-hand corner.
+
+
+Question 1
+ Which corner should be white?
+  
+
+A. Left corner
+B. Right corner
+C. Any corner
+Answer: B. Right corner
+Info 2
+ On the back row the order is Rook, Knight, Bishop, Queen, King, and our second Bishop, our second Knight and our second Rook.
+Question 2
+  
+
+
+ What sits between the two Knights?
+A. A Bishop
+B. The Queen and the King
+C. Two Pawns
+Answer: B. The Queen and the King
+Info 3
+ The Queen always starts on her own color. White Queen on white. Black Queen on black.
+Question 3
+  
+
+
+ Where does the White Queen begin?
+A. A dark square
+B. A white square
+C. Any square next to the King
+Answer: B. A white square
+Info 4
+ All eight Pawns stand in a straight line in front of the other pieces.
+Question 4
+ How many white Pawns begin the game?
+  
+
+A. Six
+B. Eight
+C. Ten
+Answer: B. Eight
+Awesome. Your chess kingdom is ready for battle.
+________________
+
+
+Lesson 5: Special Rules
+Today we unlock secret moves.
+Info 1
+ Castling is a team move. The King steps two squares toward a Rook, and the Rook hops next to the King. Both pieces must be unmoved, and nothing sits between them.
+Question 1
+ When are you allowed to castle?
+  
+
+A. After the King has moved once
+B. When pieces sit between the King and the Rook
+C. When both King and Rook have never moved, and the path is clear
+
+
+Answer: C. When both King and Rook have never moved, and the path is clear
+Info 2
+ Pawn Promotion is a reward. When a Pawn reaches the other side, it can become a Queen, Rook, Bishop, or Knight.
+Question 2
+ Which piece can a Pawn NOT turn into?
+  
+
+A. Queen
+B. Knight
+C. King
+Answer: C. King
+Info 3
+ En Passant is a sneaky pawn capture. If an enemy Pawn dashes two squares and lands beside your Pawn, you may capture it as if it moved only one square. You must do this right away.
+Question 3
+ When can you use En Passant?
+  
+
+A. Any time after the double step
+B. Only on your very next move
+C. Only with Knights
+Answer: B. Only on your very next move
+
+
+ These three tricks make games exciting. Practice them to surprise your friends.
+Great job. You just learned chess’s coolest secrets.
+
+
+Lesson 6: Check Checkmate and Good Sportsmanship
+Final lesson champions. Time to win and shake hands.
+Info 1
+ Check means your King is under attack. You must move the block or capture to escape.
+Question 1
+ If your King is in check, you may…
+  
+
+A. Ignore it
+B. Move the block or capture the attacker
+C. Move any random piece
+Answer: B. Move the block or capture the attacker
+Info 2
+ Checkmate means the King is in check and cannot escape. The game ends right away.
+
+
+Question 2
+ What does Checkmate mean?
+  
+
+A. A tie
+B. The game continues
+C. The King has no safe move
+Answer: C. The King has no safe move
+Info 3
+ Stalemate means it is your turn and you have no legal move but you are not in check. The result is a draw.
+Question 3
+ Stalemate results in…
+  
+
+A. A win for White
+B. A draw
+C. A win for Black
+Answer: B. A draw
+Info 4
+ Good sports always shake hands and say good game after the last move.
+Question 4
+ Why shake hands after a game?
+  
+
+A. To show respect
+B. To scare your opponent
+C. To restart the clock
+Answer: A. To show respect
