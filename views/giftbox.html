@@ -1,57 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Giftbox - Pepo</title>
-        <link rel="stylesheet" href="/static/css/styles.css">
-    </head>
-    <body>
-        <h1 id="new-logo">pepo</h1>
-        <div class="giftbox">
-            <h1>Pick one option to get Robux</h1>
+<head>
+    <title>Giftbox - Pepo</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="giftbox-page">
+    <h1 id="new-logo">PEPO</h1>
 
-            <div class="prize-options">
-                <div class="prize-box curriculum" onclick="window.location.href='/roadmap'">
-                    <div class="prize-content-wrapper">
-                        <img class="prize-content" src="/static/images/chess.png">
-                    </div>
-                    <h2>chess</h2>
-                </div>
-
-                <div class="prize-box curriculum">
-                    <div class="prize-content-wrapper">
-                        <img class="prize-content" src="/static/images/history.png">
-                    </div>
-                    <h2>history</h2>
-                </div>
-
-                <div class="prize-box curriculum">
-                    <div class="prize-content-wrapper">
-                        <img class="prize-content" src="/static/images/chess.png">
-                    </div>
-                    <h2>space</h2>
-                </div>
-
-                <div class="prize-box curriculum" onclick="window.location.href='/select_prize'">
-                    <div class="prize-content-wrapper">
-                        <img class="prize-content" src="/static/images/chess.png">
-                    </div>
-                    <h2>chess</h2>
-                </div>
-
-                <div class="prize-box curriculum" onclick="window.location.href='/select_prize'">
-                    <div class="prize-content-wrapper">
-                        <img class="prize-content" src="/static/images/chess.png">
-                    </div>
-                    <h2>chess</h2>
-                </div>
-
-                <div class="prize-box curriculum" onclick="window.location.href='/select_prize'">
-                    <div class="prize-content-wrapper">
-                        <img class="prize-content" src="/static/images/chess.png">
-                    </div>
-                    <h2>chess</h2>
-                </div>
+    <div class="giftbox">
+        <div class="giftbox-heading">
+            <h1>PICK ONE OPTION TO GET</h1>
+            <div class="robux-image-glow">
+                <img src="/static/images/robux.png" alt="Robux Card" />
             </div>
         </div>
-    </body>
+
+        <div class="prize-options">
+            <div class="prize-box" style="background-image: url('/static/images/chess.png')" onclick="window.location.href='/roadmap/chess'">
+                <h2>CHESS</h2>
+            </div>
+
+            <div class="prize-box" style="background-image: url('/static/images/history.png')" onclick="window.location.href='/roadmap/history'">
+                <h2>AMERICAN HISTORY</h2>
+            </div>
+
+            <div class="prize-box" style="background-image: url('/static/images/ChatGPT\ Image\ Jun\ 21\,\ 2025\,\ 04_18_43\ PM.png')" onclick="window.location.href='/roadmap/space'">
+                <h2>SPACE</h2>
+            </div>
+
+            <div class="prize-box" style="background-image: url('/static/images/biology.png')" onclick="window.location.href='/roadmap/biology'">
+                <h2>BIOLOGY</h2>
+            </div>
+
+            <div class="prize-box" style="background-image: url('/static/images/geogr.png')" onclick="window.location.href='/roadmap/geography'">
+                <h2>GEOGRAPHY</h2>
+            </div>
+
+            <div class="prize-box" style="background-image: url('/static/images/science-def-lowercase.png')" onclick="window.location.href='/roadmap/science'">
+                <h2>SCIENCE</h2>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

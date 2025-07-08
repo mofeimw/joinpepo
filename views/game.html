@@ -1,40 +1,71 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Chess Learning Game</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-</head>
-<body>
-    <div class="game-container">
-        <div class="character">
-            <div class="character-box"></div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Question</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+
+      <script>
+        window.curriculum = "{{curriculum}}";
+      </script>
+    <script src="/static/js/game.js"></script>
+  </head>
+  <body class="quiz-page">
+    <img src="/static/images/avatar/talking.gif" id="mascot" alt="Dino" class="dino-icon" />
+
+    <div class="quiz-container">
+      <div class="quiz-content">
+        <h1 class="Xquestion-text">{{question['question']}}</h1>
+
+        <button class="sound-btn" onclick="playAudio('{{curriculum}}/{{level}}/unit{{question_index}}_question.mp3', '')" id="game-audio">
+          <img class="speaker-img" src="/static/images/Volume 2.png" alt="Speaker" />
+        </button>
+
+    % if curriculum == 'history':
+      <img src="/static/images/game/{{curriculum}}{{level}}info{{question_index}}.png" class="quiz-image"
+          onerror="this.style.display='none'" />
+      % end
+
+        <div class="options">
+          % for i in range(len(question['options'])):
+          <div class="option-btn" data-index="{{i}}" onclick="playAudio('{{curriculum}}/{{level}}/unit{{question_index}}_option{{i+1}}.mp3', '')">
+            {{question['options'][i]['text']}}
+          </div>
+          % end
         </div>
-
-        <div class="question-container">
-            <h2>{{question['question']}}</h2>
-
-            <div class="options">
-                % for i in range(len(question['options'])):
-                <div class="option" data-index="{{i}}">
-                    {{question['options'][i]['text']}}
-                </div>
-                % end
-            </div>
-
-            <div class="submit-button" style="display: block;">
-                <button id="submit-answer">GO!</button>
-            </div>
-
-            <div class="next-button" style="display: none;">
-                % if is_last_question:
-                <div class="arrow" onclick="window.location.href='/complete_level/{{level}}'">FINISH</div>
-                % else:
-                <div class="arrow" onclick="window.location.href='/lesson/{{level}}/{{question_index+1}}'">NEXT</div>
-                % end
-            </div>
-        </div>
+      </div>
     </div>
 
-    <script src="/static/js/game.js"></script>
-</body>
+    % if is_last_question:
+    <button class="next-btn" id="next" onclick="window.location.href='/{{curriculum}}/complete_level/{{level}}'">
+      <img src="/static/images/Arrow 2.png" class="arrow" alt="Next" />
+    </button>
+    % else:
+    <button class="next-btn" id="next" onclick="window.location.href='/{{curriculum}}/lesson/{{level}}/{{question_index+1}}'">
+      <img src="/static/images/Arrow 2.png" class="arrow" alt="Next" />
+    </button>
+    % end
+
+<audio id="narration">
+  <source id="audio-source" src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="welcome" src="/static/audio/{{curriculum}}/{{level}}/unit{{question_index}}_question.mp3" autoplay muted></audio>
+ <script>
+    // On load we “unmute” and replay.
+    window.addEventListener('load', () => {
+      const welcome = document.getElementById('welcome');
+      // unmute and restart playback
+      welcome.muted = false;
+      welcome.play().catch(e => {
+        // if still blocked, simulate a tiny user gesture:
+        document.body.addEventListener('mousedown', () => {
+          welcome.play();
+        }, { once: true });
+      });
+    });
+  </script>
+  </body>
 </html>

@@ -4,11 +4,12 @@
     <title>Login - Pepo</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body>
-    % include('header.html', l=l)
+<body class="signup-body">
+    <h1 class="signup-logo">PEPO</h1>
+    <button class="signup-login-button" onclick="window.location.href='/signup'">signup</button>
 
     <div class="signup-container">
-        <h1>log in</h1>
+        <h1>login to pepo</h1>
 
         <div class="signup-form">
             % if defined('error'):
@@ -24,8 +25,7 @@
                     <input type="password" id="password" name="password" placeholder="password: " required>
                 </div>
 
-                <button type="submit" class="submit-btn">log in</button>
-                <button type="button" onclick="window.location.href='/signup'" class="submit-btn">sign up</button>
+                <button type="submit" class="submit-btn">login</button>
             </form>
         </div>
     </div>

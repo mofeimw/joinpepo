@@ -1,28 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Chess Lesson</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 1</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+
+  <script>
+function playAudio(audioPath, screenIdentifier) {
+  console.log('Attempting to play audio:', audioPath);
+
+  // Update audio state if we have a screen identifier
+  if (screenIdentifier) {
+    audioState.currentScreen = screenIdentifier;
+  }
+
+  const audioElement = document.getElementById('narration');
+  if (!audioElement) {
+    console.error('Audio element not found');
+    return;
+  }
+
+  const audioSource = audioElement.querySelector('source');
+  if (!audioSource) {
+    console.error('Audio source element not found');
+    return;
+  }
+
+  // Update the source
+  audioSource.src = `/static/audio/${audioPath}`;
+
+  // Reset and reload audio
+  audioElement.pause();
+  audioElement.load();
+
+  // Try to play audio
+  const playPromise = audioElement.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      // Audio played successfully
+      console.log('Audio playing successfully:', audioPath);
+      if (screenIdentifier) {
+        audioState.isPlaying = true;
+      }
+    }).catch(error => {
+      // Audio failed to play
+      console.error('Audio play failed:', error);
+      console.log('Try clicking the play button to hear the audio');
+    });
+  }
+}
+  </script>
 </head>
-<body>
-    <div class="game-container">
-        <div class="character">
-            <div class="character-box"></div>
-        </div>
+<body class="lesson-page">
+  
+  <!-- Back Button -->
+  <button class="back-btn">
+    <img src="/static/images/Log out.png" alt="Back" onclick="window.location.href='/roadmap/{{curriculum}}'" />
+  </button>
 
-        <div class="lesson-container">
-            <h2>LESSON {{lesson_num}}</h2>
+  <!-- Lesson Image -->
+  <div class="lesson-image">
+    <video autoplay id="lesson-video" >
+      <source src="/static/videos/{{curriculum}}/l{{level}}info{{lesson_num}}.mp4" type="video/mp4" onerror="document.getElementById('lesson-video').style.display='none'">
+        Your browser does not support HTML5 video.
+    </video>
+    % if curriculum != 'history':
+      <img src="/static/images/game/{{curriculum}}{{level}}info{{lesson_num}}.png" class="quiz-image"
+          onerror="this.style.display='none'" />
+      % end
+  </div>
 
-            <div class="lesson-content">
-                <p>{{lesson_content}}</p>
-            </div>
+  <!-- Lesson Content Box -->
+  <div class="lesson-box">
+    <img src="/static/images/avatar/talking.gif" alt="Mascot" class="lesson-mascot" />
 
-            <div class="next-button">
-                <div class="arrow" onclick="window.location.href='/game/{{level}}/{{lesson_num}}'">Next</div>
-            </div>
-        </div>
+    <div class="lesson-text">
+      <h2>LESSON {{level}}: {{lesson_title}}</h2>
+      <p>{{lesson_content}}</p>
     </div>
 
-    <script src="/static/js/lesson.js"></script>
+    <!-- Sound Icon -->
+    <button class="sound-btn" onclick="playAudio('{{curriculum}}/{{level}}/unit{{lesson_num}}_lesson.mp3', '')">
+      <img class="speaker-img" src="/static/images/Volume 2.png" alt="Speaker" />
+    </button>
+
+    <!-- Next Button -->
+    <button class="next-btn" onclick="window.location.href='/{{curriculum}}/game/{{level}}/{{lesson_num}}'">
+      <img src="/static/images/Arrow 2.png" class="arrow" alt="NEXT" />
+    </button>
+  </div>
+
+<audio id="narration">
+  <source id="audio-source" src="" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="welcome" src="/static/audio/{{curriculum}}/{{level}}/unit{{lesson_num}}_lesson.mp3" autoplay muted></audio>
+ <script>
+    // On load we “unmute” and replay.
+    window.addEventListener('load', () => {
+      const welcome = document.getElementById('welcome');
+      // unmute and restart playback
+      welcome.muted = false;
+      welcome.play().catch(e => {
+        // if still blocked, simulate a tiny user gesture:
+        document.body.addEventListener('mousedown', () => {
+          welcome.play();
+        }, { once: true });
+      });
+    });
+  </script>
+
 </body>
 </html>

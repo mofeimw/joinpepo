@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Send Score</title>
+  <link rel="stylesheet" href="/static/css/styles.css" />
+</head>
+<body class="score-page">
+  <h1 class="logo">PEPO</h1>
+
+  <div class="score-container">
+    <div class="score-heading-wrapper">
+      <img src="/static/images/partypoper1.png" class="party-icon left" alt="Party Left" />
+      <h1 class="score-heading">SEND YOUR SCORE TO YOUR PARENTS FIRST</h1>
+      <img src="/static/images/partypoper2.png" class="party-icon right" alt="Party Right" />
+    </div>
+
+    <!-- Add action and names -->
+    <form id="scoreForm" action="/sendscore" method="POST" class="score-form">
+      <input type="email" name="email" id="email" placeholder="EMAIL:" />
+      <p class="or-text">OR</p>
+      <input type="tel"   name="phone" id="phone" placeholder="PHONE:" />
+      <button type="submit" class="score-btn" id="submitScore">NEXT</button>
+      <input type="hidden" name="course" value="{{course}}" />
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('scoreForm').addEventListener('submit', function(e) {
+      // grab values
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      // require at least one
+      if (!email && !phone) {
+        e.preventDefault();
+        alert('Please enter either an email or a phone number.');
+      }
+      // otherwise, let the form POST normally to /sendscore
+    });
+  </script>
+</body>
+</html>
+

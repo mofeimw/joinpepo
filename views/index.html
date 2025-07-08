@@ -3,24 +3,91 @@
     <head>
         <title>Pepo</title>
         <link rel="stylesheet" href="/static/css/styles.css">
+
     </head>
     <body id="games-background">
-        % include('header.html', l=l)
-
+        <!-- % include('header.html', l=l) -->
+        <header class="game-header">
+            <h1 class="game-title">PEPO</h1>
+            <button class="start-button" onclick="window.location.href='/enrollkid'">PARENTS CLICK HERE</button>
+          </header>
         <div class="hero">
             <h1>learn and win robux</h1>
             <div class="start-wrapper">
-                <button onclick="window.location.href='/spin'" class="start">start now!</button>
+                <button onclick="window.location.href='/spin'" class="start">start now</button>
             </div>
         </div>
+            <!-- <img src="/static/images/toys/ball.png" class="toy"/> -->
+            <!-- <img src="/static/images/toys/bear.png" class="toy"/> -->
+            <img src="/static/images/toys/box.png" class="toy"/>
+            <img src="/static/images/toys/coin.png" class="toy"/>
+            <img src="/static/images/toys/controller.png" class="toy"/>
+            <img src="/static/images/toys/spin.png" class="toy"/>
+            <img src="/static/images/toys/trophy.png" class="toy"/>
+            <!-- <img src="/static/images/toys/truck.png" class="toy"/> -->
+            <div class="winner-board">
+                <h2>SEE TODAY’S WINNERS 🎉</h2>
+                <div class="winner-list">
+                  <div class="winner-item">
+                    <img src="/static/images/mofi.png" alt="Mofei Wang" class="winner-avatar">
+                    <span class="winner-name">MOFEI WANG</span>
+                    <span class="winner-score">
+                      <img src="/static/images/coin-icon copy.png" alt="Coin" class="coin-icon">
+                      <span class="count-up" data-target="5000">0</span> robux
+                    </span>
+                  </div>
+                  <div class="winner-item">
+                    <img src="/static/images/Larascott.png" alt="Lara Scott" class="winner-avatar">
+                    <span class="winner-name">LARA SCOTT</span>
+                    <span class="winner-score">
+                      <img src="/static/images/coin-icon copy.png" alt="Coin" class="coin-icon">
+                      <span class="count-up" data-target="4000">0</span> robux
 
-        <img src="/static/images/toys/ball.png" class="toy"/>
-        <!-- <img src="/static/images/toys/bear.png" class="toy"/> -->
-        <img src="/static/images/toys/box.png" class="toy"/>
-        <img src="/static/images/toys/coin.png" class="toy"/>
-        <img src="/static/images/toys/controller.png" class="toy"/>
-        <img src="/static/images/toys/spin.png" class="toy"/>
-        <img src="/static/images/toys/trophy.png" class="toy"/>
-        <!-- <img src="/static/images/toys/truck.png" class="toy"/> -->
+                    </span>
+                  </div>
+                  <div class="winner-item">
+                    <img src="/static/images/BillChan.png" alt="Bill Chan" class="winner-avatar">
+                    <span class="winner-name">BILL CHAN</span>
+                    <span class="winner-score">
+                      <img src="/static/images/coin-icon copy.png" alt="Coin" class="coin-icon">
+                      <span class="count-up" data-target="2000">0</span> robux
+                    </span>
+                  </div>
+                  <div class="winner-item">
+                    <img src="/static/images/Roshenganotra.png" alt="Roshen Ganotra" class="winner-avatar">
+                    <span class="winner-name">ROSHEN GANOTRA</span>
+                    <span class="winner-score">
+                      <img src="/static/images/coin-icon copy.png" alt="Coin" class="coin-icon">
+                      <span class="count-up" data-target="1000">0</span> robux
+
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- Animantion for robux coins -->
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  const counters = document.querySelectorAll('.count-up');
+              
+                  counters.forEach(counter => {
+                    const updateCount = () => {
+                      const target = +counter.getAttribute('data-target');
+                      let count = +counter.innerText.replace(/,/g, '') || 0;
+                      const increment = Math.ceil(target / 50);
+              
+                      if (count < target) {
+                        counter.innerText = (count + increment).toLocaleString();
+                        requestAnimationFrame(updateCount);
+                      } else {
+                        counter.innerText = target.toLocaleString();
+                        counter.classList.add('bounce'); // Add bounce at the end
+                      }
+                    };
+              
+                    updateCount();
+                  });
+                });
+              </script>
     </body>
-</html>
+    </html>
+    
